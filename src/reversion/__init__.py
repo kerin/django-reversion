@@ -14,7 +14,7 @@ from reversion.admin import VersionAdmin
 
 VERSION = (1, 5)
 
-SUPPORTED_DJANGO_VERSION = (1, 3, 0)
+SUPPORTED_DJANGO_VERSION = (1, 3, 1)
 
 def check_django_version():
     """Checks the version of django being used, and issues a warning if incorrect."""
@@ -31,7 +31,7 @@ def check_django_version():
                 "django_version": format_version(django.VERSION[:3]),
             }
         )
-        
+
 check_django_version()
 
 
@@ -50,7 +50,7 @@ get_registered_models = default_revision_manager.get_registered_models
 # Context management.
 create_revision = revision_context_manager.create_revision
 
-    
+
 # Revision meta data.
 get_user = revision_context_manager.get_user
 set_user = revision_context_manager.set_user
